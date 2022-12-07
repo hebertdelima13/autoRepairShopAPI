@@ -65,9 +65,7 @@ const create = async (req: Request<any>, res: Response<any>) => {
 
 const update = async (req: Request<any>, res: Response<any>) => {
   try {
-    if (!mongoose.isValidObjectId(req.params.id)) {
-      return res.json("Id do serviço inválido!");
-    }
+    const id = req.params.id;
     const title = req.body.title;
     const start = req.body.start;
     const startHour = req.body.starthour;
@@ -79,6 +77,7 @@ const update = async (req: Request<any>, res: Response<any>) => {
     const paid = req.body.paid;
 
     const serviceUpdated = await service.update({
+      id,
       title,
       start,
       startHour,

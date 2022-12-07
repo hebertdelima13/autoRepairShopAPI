@@ -55,9 +55,7 @@ const create = async (req: Request<any>, res: Response<any>) => {
 
 const update = async (req: Request<any>, res: Response<any>) => {
   try {
-    if (!mongoose.isValidObjectId(req.params.id)) {
-      return res.json("Id do cliente inválido!");
-    }
+    const id = req.params.id;
     const name = req.body.name;
     const email = req.body.email;
     const phone = req.body.phone;
@@ -68,7 +66,12 @@ const update = async (req: Request<any>, res: Response<any>) => {
     const car = req.body.car;
     const licenseplate = req.body.licenseplate;
 
+    if (!id) {
+      return res.status(400).json({ message: "Informe o campo id!" });
+    }
+
     const clientUpdated = await client.update({
+      id,
       name,
       email,
       phone,

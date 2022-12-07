@@ -27,7 +27,7 @@ app.delete("/users/:id", user.remove);
 app.get("/clients", client.list);
 app.get("/clients/:id", client.getById);
 app.post("/clients", client.create);
-app.put("/clients/:id", client.update);
+app.put("/clients/update/:id", client.update);
 app.delete("/clients/:id", client.remove);
 
 //Services routes
@@ -36,7 +36,7 @@ app.get("/services", service.list);
 app.get("/services/:id", service.getById);
 app.get("/servicescount", service.servicesCount);
 app.post("/services", service.create);
-app.put("/services/:id", service.update);
+app.put("/services/update/:id", service.update);
 app.delete("/services/:id", service.remove);
 
 app.listen(PORT, () => {
