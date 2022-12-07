@@ -22,6 +22,29 @@ const servicesCount = async (req: Request<any>, res: Response<any>) => {
   }
 };
 
+const servicesFinishedCount = async (req: Request<any>, res: Response<any>) => {
+  try {
+    const getCount = await service.servicesFinishedCount();
+
+    return res.json(getCount);
+  } catch (err: any) {
+    return error(res, err);
+  }
+};
+
+const servicesUnfinishedCount = async (
+  req: Request<any>,
+  res: Response<any>
+) => {
+  try {
+    const getCount = await service.servicesUnfinishedCount();
+
+    return res.json(getCount);
+  } catch (err: any) {
+    return error(res, err);
+  }
+};
+
 const getById = async (req: Request<any>, res: Response<any>) => {
   try {
     const id = req.params.id;
@@ -108,4 +131,13 @@ const remove = async (req: Request<any>, res: Response<any>) => {
   }
 };
 
-export { list, servicesCount, getById, create, update, remove };
+export {
+  list,
+  servicesCount,
+  servicesFinishedCount,
+  servicesUnfinishedCount,
+  getById,
+  create,
+  update,
+  remove,
+};

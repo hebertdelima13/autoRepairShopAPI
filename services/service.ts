@@ -14,6 +14,18 @@ const servicesCount = async () => {
   return result;
 };
 
+const servicesFinishedCount = async () => {
+  await connect();
+  const result = await Service.countDocuments({ finished: true });
+  return result;
+};
+
+const servicesUnfinishedCount = async () => {
+  await connect();
+  const result = await Service.countDocuments({ finished: false });
+  return result;
+};
+
 const getById = async (id?: string) => {
   if (!id) {
     throw new Error("Informe o campo id!");
@@ -111,4 +123,13 @@ const remove = async (id?: string) => {
   return true;
 };
 
-export { list, servicesCount, getById, create, update, remove };
+export {
+  list,
+  servicesCount,
+  servicesFinishedCount,
+  servicesUnfinishedCount,
+  getById,
+  create,
+  update,
+  remove,
+};
