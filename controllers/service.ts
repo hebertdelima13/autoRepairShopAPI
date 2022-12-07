@@ -61,9 +61,9 @@ const create = async (req: Request<any>, res: Response<any>) => {
   try {
     const title = req.body.title;
     const start = req.body.start;
-    const startHour = req.body.starthour;
+    const startHour = req.body.startHour;
     const end = req.body.end;
-    const endHour = req.body.endhour;
+    const endHour = req.body.endHour;
     const services = req.body.services;
     const price = req.body.price;
     const finished = req.body.finished;
@@ -91,9 +91,9 @@ const update = async (req: Request<any>, res: Response<any>) => {
     const id = req.params.id;
     const title = req.body.title;
     const start = req.body.start;
-    const startHour = req.body.starthour;
+    const startHour = req.body.startHour;
     const end = req.body.end;
-    const endHour = req.body.endhour;
+    const endHour = req.body.endHour;
     const services = req.body.services;
     const price = req.body.price;
     const finished = req.body.finished;

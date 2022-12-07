@@ -62,12 +62,6 @@ const create = async (service: IService) => {
   if (!service.price) {
     throw new Error("Informe o campo preço!");
   }
-  if (!service.finished) {
-    throw new Error("Informe se o serviço foi finalizado!");
-  }
-  if (!service.paid) {
-    throw new Error("Informe se o serviço foi pago!");
-  }
 
   await connect();
   await Service.create(service);
@@ -96,12 +90,6 @@ const update = async (service: IService) => {
   }
   if (!service.price) {
     throw new Error("Informe o campo preço!");
-  }
-  if (!service.finished) {
-    throw new Error("Informe se o serviço foi finalizado!");
-  }
-  if (!service.paid) {
-    throw new Error("Informe se o serviço foi pago!");
   }
 
   await connect();
