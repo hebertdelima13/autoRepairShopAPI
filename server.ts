@@ -37,6 +37,7 @@ app.get("/services/:id", service.getById);
 app.get("/servicescount", service.servicesCount);
 app.get("/servfinishedcount", service.servicesFinishedCount);
 app.get("/servunfinishedcount", service.servicesUnfinishedCount);
+app.get("/servicestotalprice", service.servicesTotalPrice);
 app.post("/services", service.create);
 app.put("/services/update/:id", service.update);
 app.delete("/services/:id", service.remove);

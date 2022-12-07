@@ -26,6 +26,15 @@ const servicesUnfinishedCount = async () => {
   return result;
 };
 
+const servicesTotalPrice = async () => {
+  await connect();
+  const result = await Service.aggregate().group({
+    _id: null,
+    totalprice: { $sum: "$price" },
+  });
+  return result;
+};
+
 const getById = async (id?: string) => {
   if (!id) {
     throw new Error("Informe o campo id!");
@@ -116,6 +125,7 @@ export {
   servicesCount,
   servicesFinishedCount,
   servicesUnfinishedCount,
+  servicesTotalPrice,
   getById,
   create,
   update,

@@ -45,6 +45,16 @@ const servicesUnfinishedCount = async (
   }
 };
 
+const servicesTotalPrice = async (req: Request<any>, res: Response<any>) => {
+  try {
+    const getTotalPrice = await service.servicesTotalPrice();
+
+    return res.json(getTotalPrice);
+  } catch (err: any) {
+    return error(res, err);
+  }
+};
+
 const getById = async (req: Request<any>, res: Response<any>) => {
   try {
     const id = req.params.id;
@@ -136,6 +146,7 @@ export {
   servicesCount,
   servicesFinishedCount,
   servicesUnfinishedCount,
+  servicesTotalPrice,
   getById,
   create,
   update,
