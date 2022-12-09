@@ -35,9 +35,6 @@ const create = async (client: IClient) => {
   if (!client.street) {
     throw new Error("Informe o campo endereço!");
   }
-  if (!client.streetnumber) {
-    throw new Error("Informe o campo endereço!");
-  }
   if (!client.city) {
     throw new Error("Informe o campo endereço!");
   }
@@ -68,9 +65,6 @@ const update = async (client: IClient) => {
     throw new Error("Informe o campo telefone!");
   }
   if (!client.street) {
-    throw new Error("Informe o campo endereço!");
-  }
-  if (!client.streetnumber) {
     throw new Error("Informe o campo endereço!");
   }
   if (!client.city) {

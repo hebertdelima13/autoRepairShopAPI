@@ -19,7 +19,6 @@ const clientSchema = new mongoose.Schema({
   },
   streetnumber: {
     type: Number,
-    required: true,
   },
   city: {
     type: String,

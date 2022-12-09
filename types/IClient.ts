@@ -4,7 +4,7 @@ interface IClient {
   email: string;
   phone: string;
   street: string;
-  streetnumber: number;
+  streetnumber?: number;
   city: string;
   state: string;
   car: string;
