@@ -29,9 +29,6 @@ const serviceSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
-  totalprice: {
-    type: Number,
-  },
   finished: {
     type: Boolean,
     default: false,

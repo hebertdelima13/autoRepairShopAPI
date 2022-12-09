@@ -7,7 +7,6 @@ interface IService {
   endHour: string;
   services: string;
   price: number;
-  totalprice?: number;
   finished: boolean;
   paid: boolean;
 }
