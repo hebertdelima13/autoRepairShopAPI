@@ -13,7 +13,7 @@
 ## 🚀 Recursos
 
  <p align="left">
-    - Login de usuários. <br>
+    - Criar, listar e deletar usuários. <br>
     - Criar, editar e deletar clientes e serviços.<br>
     - Listagem de clientes e serviços.<br>
     - Listagem do total de vendas.
