@@ -16,7 +16,7 @@
     - Criar, listar e deletar usuários. <br>
     - Criar, editar e deletar clientes e serviços.<br>
     - Listagem de clientes e serviços.<br>
-    - Listagem do total de vendas.
+    - Listagem do total de vendas. <br>
     - Listagem da quantidade de serviços à finalizar e finalizados.
  </p>
 
